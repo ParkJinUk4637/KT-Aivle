@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KT Aivle Join</title>
+    <link rel="icon" href="https://www.kt.com/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+    <!-- header.header>nav.wrap>ul>li*3 -->
+    <header class="header">
+        <nav class="wrap">
+            <label class="logo">KT</label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main>section.wrap -->
+    <main>
+        <section class="wrap">
+            <!-- 하위에서 상위로 하나 올라가는 거 : ^ -->
+            <!-- div.join-warp>(div.attr-wrap>(label+br+input)^hr)*6 -->
+            <div class="join-warp">
+                <div class="attr-wrap">
+                    <label for="email">Work Email</label><br>
+                    <input id="email" type="text" placeholder="input email address">
+                </div><hr>
+                <div class="attr-wrap">
+                    <label for="pw">Password</label><br>
+                    <input id="pw" type="password" placeholder="input password">
+                </div><hr>
+                <div class="attr-wrap">
+                    <label for="ckpw">Check Password</label><br>
+                    <input id="ckpw" type="password" placeholder="input password for check">
+                </div><hr>
+                <div class="attr-wrap">
+                    <label>Address</label><br>
+                    <div class="input-addr">
+                        <label><input type="radio" name="addr" checked>Seoul</label>
+                        <label><input type="radio" name="addr">Pusan</label>
+                    </div>
+                </div><hr>
+                <div class="attr-wrap">
+                    <label for="birth">BirthDay</label><br>
+                    <input id="birth" type="date" value="2023-01-01"></div>
+                <hr>
+                <div class="attr-wrap">
+                    <label>Subscription Path</label><br>
+                    <!-- select#subscription>option[value='opt$']*3 -->
+                    <select name="" id="subscription">
+                        <option value="opt1">Not Selected</option>
+                        <option value="opt2">Recommended bt Friends</option> 
+                        <option value="opt3">Advertisement</option>
+                    </select>
+                </div><hr>
+                <small class="msg">tesg msg</small>
+            </div>
+            <button id="join-btn" type="button">join</button>
+        </section>
+    </main>
+
+    <!-- footer.footer>p{All rights reserved. @KT Aivle} -->
+    <footer class="footer">
+        <p>All rights reserved. @KT Aivle</p>
+    </footer>
+</body>
+</html>

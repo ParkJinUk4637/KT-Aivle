@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "d2coding";
+    src: url("../fonts/D2Coding-all.ttc");
+}
+
+/* html, body */
+html, body {
+    margin: 0;
+    height: 100%;
+    background-color: #343a40;
+    color: white;
+    /* Roboto가 없으면 d2coding, d2coding이 없으면 sans-serif */
+    font-family: "Roboto", "d2coding", sans-serif;
+}
+
+/* header */
+header {
+    height: 60px;
+    background-color: white;
+    color: black;
+}
+
+header > .wrap {
+    max-width: 720px;
+
+    /* 레이아웃 가운데 정렬 */
+    margin: 0 auto;
+
+    /* 위아래 12px, 좌우 20px 패딩 */
+    padding: 12px 20px;
+}
+
+header > .wrap > .logo {
+    font-size: 32px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+header > .wrap > ul{
+
+    /* 리스트 우측 정렬 */
+    float: right;
+
+    /* 리스트 앞의 점 제거 */
+    list-style: none;
+}
+
+header > .wrap > ul > li{
+    
+    /* 리스트의 요소 전부 한줄로 좌측정렬 */
+    float: left;
+
+    /* 각 요소마다 좌측 마진 */
+    margin-left: 10px;
+}
+
+header > .wrap > ul > li > a{
+
+    /* 하이퍼링크 밑줄 제거 */
+    text-decoration: none;
+    color: #6c757d;
+    font-weight: bold;
+}
+
+header > .wrap > ul > li > a.active{
+    color: #343a40;
+    border-bottom: 3px solid #343a40;
+}
+
+/* footer */
+footer{
+    max-width: 720px;
+    margin: 0 auto;
+    height: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+footer > p{
+    margin: 0;
+}
+
+/* main */
+main {
+    /* 전체 높이에서 header 60px, footer 60px 만큼 뺀 것을 main의 길이로 잡음 */
+    height: calc(100% - 120px);
+    max-width: 720px;
+    padding: 0 20px;
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+}
+
+main>.wrap {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+main>.wrap>p {
+    font-size:20px;
+}
+
+main>.wrap>button{
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    /* 마우스 오버시 손가락 모양으로 바꿈 */
+    cursor: pointer;
+}
+
+main>.wrap>button:hover {
+    background-color: green;
+    color:white
+}
