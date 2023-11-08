@@ -67,6 +67,7 @@ console.log((balance>=withdraw) && (withdraw<=5000));
 
 
 // 예금 잔고에서 인출 금액이 인출 가능하면 '인출가능' 출력
+// 4. 조건문
 var balance = 10000;
 var withdraw = 6000;
 if(balance >= withdraw){
@@ -74,3 +75,109 @@ if(balance >= withdraw){
 }else{
     console.log('인출불가');
 }
+
+// 최대 인출 금액 5000원 조건 추가
+// 인출이 불가하면 불가 사유 출력
+// 인출 불가 : 잔액 부족, 최대 인출 금액 초과, 인출 가능
+var balance = 2000;
+var withdraw = 4000;
+if(balance <= withdraw){
+    console.log("인출 불가 : 잔액 부족");
+}else if(withdraw>5000){
+    console.log("인출 불가 : 최대인출금액초과");
+}else{
+    console.log("인출 가능");
+}
+
+
+// 5. 반복문
+// for, while, break, continue
+var count=3;
+while(count> 0){
+    count -= 1;
+    console.log('js');
+}
+
+for(var i = 0; i < 3; i++){
+    console.log('js');
+}
+
+// 부동 소수점 문제
+var data1 = 0.1, data2= 0.2;
+console.log(data1 + data2 === 0.3)
+// 반올림을 해준다.
+
+var count = 6, lotto = '';
+for(var i = 0;i<count;i++){
+    var randomNumber = Math.ceil(Math.random()*44) + 1;
+    lotto = lotto + randomNumber + ' ';
+}
+
+console.log(lotto);
+
+// 6. 함수
+function show_lotto(){
+    var count =6, lotto='';
+    for(var i=0;i<count;i++){
+        var randomNumber = Math.ceil(Math.random()*44) + 1;
+        lotto = lotto + randomNumber+' ';
+    }
+    console.log(lotto);
+}
+
+show_lotto();
+
+// 선언식과 표현식의 차이
+// 선언식은 코드의 최상단으로 올라가서 선언됨 >> 호이스팅
+
+// 익명함수
+// 선언과 동시에 호출하는 함수
+(function minus1(n1, n2){
+    console.log(n1-n2);
+}(4, 1));
+// 이거 호출 안됨.
+// 호출 안되면 왜 쓰는가? : F12 눌러서 개발자 도구에서 유저가 임의로 실행하지 않게 하기 위해서.
+
+// 스코프
+// 함수안과 함수밖의 영역이 서로 다른 영역의 메모리를 사용
+// 함수안 : 지역 영역 : local
+// 함수 밖 : 전역 영역 : global
+var data = 10;
+function change(){
+    var data=20;
+}
+change();
+console.log(data);
+
+// 7. 객체 : object
+// 1
+var account = {
+    balance: 10000,
+    withdraw: function(amount){
+        account.balance -= amount;
+    }
+}
+
+account.withdraw(2000);
+console.log(account);
+
+// 2
+function Person(name){
+    this.name = name
+}
+
+var person = new Person('andy');
+console.log(person);
+
+// json 객체 : 
+// 객체 > 문자열
+var data = {name:'andy',addr:'seoul'};
+console.log(typeof data,data);
+var json = JSON.stringify(data);
+console.log(typeof json,json);
+
+// 문자열 > 객체
+var jsonObj = JSON.parse(json);
+console.log(typeof jsonObj,jsonObj);
+
+console.log(NaN == NaN, NaN === NaN);
