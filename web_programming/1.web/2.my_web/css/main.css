@@ -3,7 +3,7 @@
     src: url("../fonts/D2Coding-all.ttc");
 }
 
-/* html, body */
+html, body
 html, body {
     margin: 0;
     height: 100%;
@@ -22,10 +22,8 @@ header {
 
 header > .wrap {
     max-width: 720px;
-
     /* 레이아웃 가운데 정렬 */
     margin: 0 auto;
-
     /* 위아래 12px, 좌우 20px 패딩 */
     padding: 12px 20px;
 }
@@ -82,8 +80,8 @@ footer > p{
 
 /* main */
 main {
-    /* 전체 높이에서 header 60px, footer 60px 만큼 뺀 것을 main의 길이로 잡음 */
-    height: calc(100% - 120px);
+    /* header height 60px + footer height 60px = 120px */
+    height: calc(100% - 120px); 
     max-width: 720px;
     padding: 0 20px;
     margin: 0 auto;
@@ -97,7 +95,7 @@ main>.wrap {
 }
 
 main>.wrap>p {
-    font-size:20px;
+    font-size: 20px;
 }
 
 main>.wrap>button{
