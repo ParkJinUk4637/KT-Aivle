@@ -181,3 +181,25 @@ var jsonObj = JSON.parse(json);
 console.log(typeof jsonObj,jsonObj);
 
 console.log(NaN == NaN, NaN === NaN);
+
+// 클로저 : 함수 안에 선언된 함수
+// 특징 : 전역변수 사용 억제 -> 정보 은닉
+// 지역 변수를 사용하여 
+var Account = function(){
+    var balance = 10000;
+    this.deposit = function(amount){
+        balance += amount;
+    }
+    this.show = function(){
+        return balance;
+    }
+}
+var account = new Account();
+console.log(account.show());
+account.deposit(2000);
+console.log(account.show());
+
+// 웹 브라우저에서 사용하는 객체
+// windows : 전역 객체 : 모든 전역변수를 저장하는 객체
+// location : url 데이터를 저장하는 객체
+// document : 페이지의 문서 정보를 저장하는 객체
