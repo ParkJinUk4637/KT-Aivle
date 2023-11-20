@@ -1,0 +1,2 @@
+https://github.com/purum01/dev
+django version 4.2
